@@ -1,0 +1,191 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Pole",
+            "name": "category",
+            "kind": "Grouping"
+        }
+    ],
+    "drilldown": {
+        "roles":["category"]
+    },
+    "sorting": {
+        "default": {   }
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "category": {
+                        "max": 1
+                    }
+                }
+            ],
+             "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    }
+                }
+            }
+        }
+    ],
+    "objects": {
+        "general": {
+            "displayName": "General",
+            "displayNameKey": "formattingGeneral",
+            "properties": {
+                "filter": {
+                    "type": {
+                        "filter": false
+                    },
+                    "filterState": false
+                }
+            }
+        },
+        "transitionSettings": {
+            "displayName": "Animacje Ustawienia",
+            "properties": {
+                "autoStart": {
+                    "displayName": "Auto Start",
+                    "type": { 
+                        "bool": true 
+                     }
+                },
+                "loop": {
+                    "displayName": "Pętla",
+                    "type": { 
+                        "bool": true 
+                     }
+                },
+                "timeInterval": {
+                    "displayName": "Czas(ms)",
+                    "type": {
+                        "integer": true
+                    }
+                }
+            }
+        },
+        "colorSelector": {
+            "displayName": "Kolory",
+            "properties": {
+                "pickedColor": {
+                    "displayName": "Default Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "showAll": {
+                    "displayName": "Pokaż Wszystko",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "playColor": {
+                    "displayName": "Play",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "pauseColor": {
+                    "displayName": "Pause",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "stopColor": {
+                    "displayName": "Stop",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "previousColor": {
+                    "displayName": "Previous",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "nextColor": {
+                    "displayName": "Next",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "captionSettings": {
+            "displayName": "Włącz pole wyboru",
+            "properties": {
+                "show": {
+                    "displayName": "Pokaż",
+                    "type": { 
+                        "bool": true 
+                     }
+                },
+                "captionColor": {
+                    "displayName": "Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fontSize": {
+                   "displayName": "Text size",
+                    "type": {
+                        "integer": true 
+                    }
+                },
+                "align": {
+                   "displayName": "Align",
+                   "type": {
+                         "enumeration": [
+                            {
+                                "displayName": "Right",
+                                "value": "right"
+                            },
+                            {
+                                "displayName": "Center",
+                                "value": "center"
+                            },
+                            {
+                                "displayName": "Left",
+                                "value": "left"
+                            }
+                         ]
+                     }
+                }
+            }
+        }
+    },
+    "supportsHighlight": true,
+    "suppressDefaultTitle": true,
+    "supportsSynchronizingFilterState": true
+    
+}
