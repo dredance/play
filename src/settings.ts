@@ -26,23 +26,23 @@
 
 "use strict";
 
-import { dataViewObjectsParser } from "powerbi-visuals-utils-dataviewutils";
+import {
+    dataViewObjectsParser
+} from "powerbi-visuals-utils-dataviewutils";
 import DataViewObjectsParser = dataViewObjectsParser.DataViewObjectsParser;
 
 export class VisualSettings extends DataViewObjectsParser {
-      public dataPoint: dataPointSettings = new dataPointSettings();
-      }
+    public slicerSettings: SlicerSettings = new SlicerSettings();
+}
 
-    export class dataPointSettings {
-     // Default color
-      public defaultColor: string = "";
-     // Show all
-      public showAllDataPoints: boolean = true;
-     // Fill
-      public fill: string = "";
-     // Color saturation
-      public fillRule: string = "";
-     // Text Size
-      public fontSize: number = 12;
-     }
-
+export class SlicerSettings {
+    public allSelectedLabel: string = 'All'
+    public defaultColor: string = '#181818'
+    public selectedColor: string = '#000000'
+    public fontFamily: string = 'Arial, sans-serif'
+    public fontSize: number = 16
+    public textAlign: string = 'center'
+    public paddingBottom: number = 2
+    public marginBottom: number = 6
+    public underlineWidth: number = 1
+}
